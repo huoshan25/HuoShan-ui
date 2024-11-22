@@ -1,0 +1,58 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build
+dist
+packages/*/dist
+*.tsbuildinfo
+
+# IDE
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test
+coverage
+test-results
+playwright-report
+
+# Cache
+.cache
+.temp
+.tmp
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# React/Vue specific
+.next
+.nuxt
+*.local
+.turbo
+
+# Package manager
+.pnpm-debug.log*
+.npmrc
+
+# Optional
+*.swp
+*.swo
+.history
