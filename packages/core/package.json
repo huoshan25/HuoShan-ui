@@ -1,12 +1,12 @@
 {
-  "name": "@HuoShan-ui/core",
+  "name": "@huoshan-ui/core",
   "version": "1.0.0",
-  "description": "",
+  "description": "组件核心逻辑",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "火山",
+  "license": "MIT"
 }

@@ -1,17 +1,17 @@
 {
   "name": "test-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "测试组件库",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["test"],
+  "author": "火山",
   "license": "ISC",
   "dependencies": {
-    "@HuoShan-ui/vue": "workspace:^",
+    "@huoshan-ui/vue": "workspace:^",
     "vue": "^3.5.13"
   },
   "devDependencies": {

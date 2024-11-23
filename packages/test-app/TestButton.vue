@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { hsButton } from '@HuoShan-ui/vue';
+import { hsButton } from '@huoshan-ui/vue';
 
 const { buttonProps, setLoading, state } = hsButton();
 

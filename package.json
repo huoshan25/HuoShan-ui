@@ -1,14 +1,21 @@
 {
-  "name": "HuoShan-ui",
+  "name": "huoshan-ui",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "一个面向Vue和React的无头UI组件库",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "headless",
+    "ui",
+    "vue",
+    "react",
+    "components"
+  ],
+  "author": "火山",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.9.1",
     "tsup": "^8.3.5",
