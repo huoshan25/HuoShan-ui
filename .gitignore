@@ -57,3 +57,7 @@ packages/*/coverage
 *.swp
 *.swo
 .history
+
+# VitePress
+packages/docs/.vitepress/cache
+packages/docs/.vitepress/dist
