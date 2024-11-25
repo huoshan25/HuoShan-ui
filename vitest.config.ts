@@ -15,7 +15,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@huoshan-ui/vue': path.resolve(__dirname, './packages/vue/src'),
-      '@huoshan-ui/core': path.resolve(__dirname, './packages/core/src')
+      '@huoshan-ui/vue/*': path.resolve(__dirname, './packages/vue/src/*'),
+      '@huoshan-ui/core': path.resolve(__dirname, './packages/core/src'),
+      '@huoshan-ui/core/*': path.resolve(__dirname, './packages/core/src/*')
     }
   }
 })
