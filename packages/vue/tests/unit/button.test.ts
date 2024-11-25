@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { hsButton } from '@huoshan-ui/vue'
 import { defineComponent } from 'vue'
+import {hsButton} from "../../src/button";
 
 describe('hsButton', () => {
   it('应该使用默认值正确初始化', () => {

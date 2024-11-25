@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { ButtonCore } from '@huoshan-ui/core'
+import {ButtonCore} from "../../src/button";
 
 describe('ButtonCore', () => {
   it('初始化时应该有正确的默认状态', () => {
