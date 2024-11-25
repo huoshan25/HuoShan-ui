@@ -4,6 +4,7 @@
   "description": "vue组件实现",
   "main": "index.js",
   "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

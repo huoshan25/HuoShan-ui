@@ -11,8 +11,13 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["packages/*"]
+      "@/*": ["packages/*"],
+      "@huoshan-ui/vue": ["packages/vue/src"],
+      "@huoshan-ui/vue/*": ["packages/vue/src/*"],
+      "@huoshan-ui/core": ["packages/core/src"],
+      "@huoshan-ui/core/*": ["packages/core/src/*"]
     }
   },
   "include": ["packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue"]
