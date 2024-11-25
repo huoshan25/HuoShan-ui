@@ -3,23 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": ".",
-    "jsx": "preserve",
-    "paths": {
-      "@huoshan-ui/vue": ["./src"]
-    },
-    // 添加以下配置
-    "declaration": true,         // 生成 .d.ts 文件
-    "declarationMap": true,      // 生成 .d.ts.map 文件
-    "sourceMap": true,          // 生成 source map
-    "composite": true,          // 启用项目引用
-    "types": ["vue"]           // 包含 Vue 的类型定义
+    "jsx": "preserve"
   },
-  "include": ["src"],
-  "exclude": [
-    "dist"
-  ],
-  // 添加对 core 包的引用
-  "references": [
-    { "path": "../core" }
-  ]
+  "include": ["src"]
 }
