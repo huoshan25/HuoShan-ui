@@ -1,0 +1,20 @@
+:root {
+  /* 品牌色 */
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #9499ff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #454ce1;
+
+  /* 主题色 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f9f9f9;
+  --vp-c-bg-mute: #f1f1f1;
+}
+
+/* 暗黑模式 */
+.dark {
+  --vp-c-bg: #1e1e1e;
+  --vp-c-bg-soft: #2c2c2c;
+  --vp-c-bg-mute: #2c2c2c;
+}
