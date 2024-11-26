@@ -1,4 +1,9 @@
 packages:
   - 'packages/*'
+  # 排除不需要的目录
   - '!packages/examples'
   - '!packages/docs'
+  - '!**/tests/e2e/**'        # 排除 e2e 测试
+  - '!**/tests/integration/**' # 排除集成测试
+  - '!**/tests/fixtures/**'    # 排除测试数据
+  - '!**/coverage/**'
