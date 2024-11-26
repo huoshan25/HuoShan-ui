@@ -9,7 +9,8 @@
     "build": "pnpm -r build",
     "test": "pnpm -r test",
     "test:coverage": "pnpm -r test:coverage",
-    "test:ui": "pnpm -r test:ui"
+    "test:ui": "pnpm -r test:ui",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm publish -r"
   },
   "keywords": [
     "headless",

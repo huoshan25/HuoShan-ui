@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: 安装依赖关系
+        run: pnpm install
+
+      - name: 运行测试
+        run: pnpm test
+
+      - name: 构建
+        run: pnpm build
