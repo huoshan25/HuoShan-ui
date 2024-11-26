@@ -25,10 +25,12 @@ jobs:
           cache: 'pnpm'
 
       - name: 安装依赖关系
+        working-directory: ./packages/docs
         run: pnpm install
 
       - name: 建立文档
-        run: pnpm docs:build
+        working-directory: ./packages/docs
+        run: pnpm build
 
       - name: 部署到GitHub页面
         uses: JamesIves/github-pages-deploy-action@v4
