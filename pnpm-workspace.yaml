@@ -1,3 +1,4 @@
 packages:
   - 'packages/*'
-  - '!**/test-app/**'
+  - '!packages/examples'
+  - '!packages/docs'
