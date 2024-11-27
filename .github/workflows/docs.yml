@@ -38,8 +38,7 @@ jobs:
         run: pnpm add -D vitepress
 
       - name: 建立文档
-        working-directory: ./packages/docs
-        run: pnpm build
+        run: pnpm docs:build
 
       - name: 部署到GitHub页面
         uses: JamesIves/github-pages-deploy-action@v4
