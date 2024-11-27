@@ -48,3 +48,4 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN_UI }}
           branch: gh-pages
           folder: packages/docs/.vitepress/dist
+          clean: true
