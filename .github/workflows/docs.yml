@@ -27,21 +27,20 @@ jobs:
       - name: 安装依赖
         run: pnpm install
 
-#      - name: 构建核心包
-#        run: pnpm --filter @huoshan-ui/core build
-#
-#      - name: 构建 Vue 包
-#        run: pnpm --filter @huoshan-ui/vue build
-
       - name: 安装 VitePress
         working-directory: ./packages/docs
         run: pnpm add -D vitepress
+
+      - name: 检查目录结构
+        run: |
+          ls -la packages/docs
+          ls -la packages/docs/.vitepress || echo "No .vitepress directory"
 
       - name: 建立文档
         run: pnpm docs:build
 
       - name: 检查构建输出
-        run: ls -la packages/docs/.vitepress/dist
+        run: ls -la packages/
 
       - name: 部署到GitHub页面
         uses: JamesIves/github-pages-deploy-action@v4
