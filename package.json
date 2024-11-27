@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "build": "pnpm -r build",
-    "test": "pnpm -r test",
+    "test": "pnpm -r --filter=!@huoshan-ui/docs test",
     "test:coverage": "pnpm -r test:coverage",
     "test:ui": "pnpm -r test:ui",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm publish -r"
