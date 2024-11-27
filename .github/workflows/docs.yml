@@ -39,7 +39,7 @@ jobs:
       - name: 建立文档
         run: pnpm docs:build
 
-      - name: 检查构建输出
+      - name: 检查构建输出1
         run: ls -la packages/docs/.vitepress/dist
 
       - name: 部署到GitHub页面
