@@ -42,10 +42,14 @@ jobs:
       - name: 检查构建输出
         run: ls -la packages/docs/.vitepress/dist
 
-      - name: 部署到GitHub页面
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: 设置页面
+        uses: actions/configure-pages@v4
+
+      - name: 上传产品
+        uses: actions/upload-pages-artifact@v2
         with:
-          token: ${{ secrets.ACCESS_TOKEN_UI }}
-          branch: gh-pages
-          folder: packages/docs/.vitepress/dist
-          clean: true
+          path: './packages/docs/.vitepress/dist'
+
+      - name: 部署到GitHub页面
+        id: deployment
+        uses: actions/deploy-pages@v3
