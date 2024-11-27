@@ -33,6 +33,10 @@ jobs:
 #      - name: 构建 Vue 包
 #        run: pnpm --filter @huoshan-ui/vue build
 
+      - name: 安装 VitePress
+        working-directory: ./packages/docs
+        run: pnpm add -D vitepress
+
       - name: 建立文档
         working-directory: ./packages/docs
         run: pnpm build
