@@ -27,11 +27,11 @@ jobs:
       - name: 安装依赖
         run: pnpm install
 
-      - name: 构建核心包
-        run: pnpm --filter @huoshan-ui/core build
-
-      - name: 构建 Vue 包
-        run: pnpm --filter @huoshan-ui/vue build
+#      - name: 构建核心包
+#        run: pnpm --filter @huoshan-ui/core build
+#
+#      - name: 构建 Vue 包
+#        run: pnpm --filter @huoshan-ui/vue build
 
       - name: 建立文档
         working-directory: ./packages/docs
