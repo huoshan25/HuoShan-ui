@@ -24,16 +24,14 @@ jobs:
           node-version: '18'
           cache: 'pnpm'
 
-      - name: 安装根目录依赖
+      - name: 安装依赖
         run: pnpm install
 
-      - name: 安装文档依赖
-        working-directory: ./packages/docs
-        run: pnpm install
+      - name: 构建核心包
+        run: pnpm --filter @huoshan-ui/core build
 
-      - name: 安装 VitePress
-        working-directory: ./packages/docs
-        run: pnpm add -D vitepress
+      - name: 构建 Vue 包
+        run: pnpm --filter @huoshan-ui/vue build
 
       - name: 建立文档
         working-directory: ./packages/docs
