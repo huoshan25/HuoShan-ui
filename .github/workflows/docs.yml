@@ -1,4 +1,4 @@
-name: 部署文档
+name: 部署VitePress
 
 on:
   push:
@@ -8,48 +8,33 @@ on:
       - '.github/workflows/docs.yml'
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-
-      - name: 设置pnpm
-        uses: pnpm/action-setup@v2
+      - name: 检查代码
+        uses: actions/checkout@v2
         with:
-          version: latest
+          ref: main
 
-      - name: 设置Node.js
+      - name: 设置 Node.js and pnpm
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'pnpm'
+          node-version: '20.10.0'
 
-      - name: 安装依赖
+      - name: 安装 pnpm
+        run: npm install -g pnpm
+
+      - name: Install依赖性
         run: pnpm install
 
-      - name: 安装 VitePress
-        working-directory: ./packages/docs
-        run: pnpm add -D vitepress
-
-      - name: 检查目录结构
-        run: |
-          ls -la packages/docs
-          ls -la packages/docs/.vitepress || echo "No .vitepress directory"
-
-      - name: 建立文档
-        run: pnpm docs:build
-
-      - name: 检查构建输出
-        run: ls -la packages/docs/.vitepress/dist
-
-      - name: 设置页面
-        uses: actions/configure-pages@v4
-
-      - name: 上传产品
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: './packages/docs/.vitepress/dist'
+      - name: Build VitePress
+        run: pnpm run docs:build
 
       - name: 部署到GitHub页面
-        id: deployment
-        uses: actions/deploy-pages@v3
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN_UI }}
+          publish_dir: packages/docs/.vitepress/dist
+          publish_branch: gh-pages
+          dotfiles: true
