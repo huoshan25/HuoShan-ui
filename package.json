@@ -11,7 +11,7 @@
     "test:coverage": "pnpm -r test:coverage",
     "test:ui": "pnpm -r test:ui",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm publish -r",
-    "docs:build": "cd packages/docs && pnpm docs:build"
+    "docs:build": "cd packages/docs && pnpm build"
   },
   "keywords": [
     "headless",
