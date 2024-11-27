@@ -28,6 +28,12 @@ jobs:
       - name: Install依赖性
         run: pnpm install
 
+      - name: Install dependencies
+        run: |
+          pnpm install
+          cd packages/docs
+          pnpm add -D vitepress
+
       - name: Build VitePress
         run: pnpm run docs:build
 
