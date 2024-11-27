@@ -47,3 +47,7 @@ jobs:
         with:
           branch: gh-pages
           folder: packages/docs/.vitepress/dist
+          clean: true
+          clean-exclude: |
+            .nojekyll
+            CNAME
