@@ -11,7 +11,7 @@
     "preview": "vitepress preview",
     "docs:dev": "pnpm --filter @huoshan-ui/docs dev",
     "docs:build": "pnpm --filter @huoshan-ui/docs build",
-    "docs:preview": "pnpm --filter @huoshan-ui/docs preview",
+    "docs:preview": "pnpm --filter @huoshan-ui/docs preview"
   },
   "keywords": [],
   "author": "火山",
