@@ -25,8 +25,4 @@
     "vitepress-theme-demoblock": "^3.0.7",
     "vue": "^3.5.13"
   },
-  "dependencies": {
-    "@huoshan-ui/core": "workspace:^",
-    "@huoshan-ui/vue": "workspace:^"
-  }
 }
